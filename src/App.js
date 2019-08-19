@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.css";
+import RepoForm from "./RepoForm/RepoForm";
+import RepoTable from "./RepoTable/RepoTable";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={props => <RepoForm {...props} formName="Add Email" />}
+          />
+          <Route path="/:namespace/:name" component={RepoTable} />
+          <Route component={RepoForm} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
