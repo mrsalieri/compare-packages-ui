@@ -1,4 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# compare-packages-ui
+Developed for working with the API below
+https://github.com/mrsalieri/compare-packages
+
+## Installation
+Just run `npm install`. No configuration structures were implemented yet, so if the API is not available at http://localhost:8054 then the urls in the RepoForm and RepoTable files should be modified.
+
+## Running
+You can start the API by running `npm start` and app will be available at [http://localhost:3000](http://localhost:3000)
+
+You can also check the repo details by http://localhost:3000/namespace/name
+
+
+## Future Improvements
+Config structure should be implemented
+
+Data services and components should be separated from controllers
+
+Tests should be implemented
+
+Form controls should be added
+
+
 
 ## Available Scripts
 
