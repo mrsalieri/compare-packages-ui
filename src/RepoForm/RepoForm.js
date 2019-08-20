@@ -59,6 +59,7 @@ class RepoForm extends Component {
 
     return (
       <div className="RepoForm">
+        <p>ADD NEW EMAIL TO REPO</p>
         <form>
           <input
             type="text"
