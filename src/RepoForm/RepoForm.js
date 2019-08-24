@@ -43,7 +43,7 @@ class RepoForm extends Component {
     } catch (e) {
       this.setState({
         submitting: false,
-        responseText: e.response.data.data
+        responseText: e.response.data.message
       });
     }
   };
