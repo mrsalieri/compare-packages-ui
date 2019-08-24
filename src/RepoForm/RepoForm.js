@@ -29,8 +29,8 @@ class RepoForm extends Component {
         method: "post",
         url: `http://localhost:8054/api/repo/addemail`,
         data: {
-          nameIn: repoName,
-          namespaceIn: repoNamespace,
+          nameIn: repoName.trim(),
+          namespaceIn: repoNamespace.trim(),
           emailListIn: emailList.split(",").map(val => val.trim())
         },
         timeout: 5000
